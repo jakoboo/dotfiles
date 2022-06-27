@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "Setting up test project..."
+
+REPOSITORY=$1
+DIRECTORY="./$2"
+
+if [[ $PWD != "$HOME/Projects/Development/Source" ]]; then
+    echo "You can only setup projects in the $HOME/Projects/Development/src directory."
+
+    exit 1
+fi
+
+if [ -z "$REPOSITORY" ] || [ -z "$DIRECTORY" ]; then
+    echo "Please provide both a repository and target directory."
+
+    exit 1
+fi
+
+git clone $REPOSITORY $DIRECTORY
+cd $DIRECTORY
+
+cp .env.example .env
+
+npm install
+npm run dev
+
+open -a "/Applications/Visual Studio Code.app" "`pwd`"
