@@ -3,18 +3,6 @@
 	url = https://github.com/altercation/solarized
 
 # ZSH theme and plugins
-#[submodule "zsh_custom/themes/powerlevel10k"]
-#	path = zsh_custom/themes/powerlevel10k
-#	url = https://github.com/romkatv/powerlevel10k.git
-#[submodule "zsh_custom/plugins/zsh-completions"]
-#	path = zsh_custom/plugins/zsh-completions
-#	url = https://github.com/zsh-users/zsh-completions
-#[submodule "zsh_custom/plugins/zsh-autosuggestions"]
-#	path = zsh_custom/plugins/zsh-autosuggestions
-#	url = https://github.com/zsh-users/zsh-autosuggestions
-#[submodule "zsh_custom/plugins/zsh-syntax-highlighting"]
-#	path = zsh_custom/plugins/zsh-syntax-highlighting
-#	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "zsh_custom/themes/powerlevel10k"]
 	path = zsh_custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
