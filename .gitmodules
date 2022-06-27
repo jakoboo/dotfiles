@@ -9,9 +9,9 @@
 [submodule "zsh_custom/plugins/zsh-completions"]
 	path = zsh_custom/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
-[submodule "/Users/jakub/.dotfiles/zsh_custom/plugins/zsh-autosuggestions"]
-	path = /Users/jakub/.dotfiles/zsh_custom/plugins/zsh-autosuggestions
+[submodule "zsh_custom/plugins/zsh-autosuggestions"]
+	path = zsh_custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "/Users/jakub/.dotfiles/zsh_custom/plugins/zsh-syntax-highlighting"]
-	path = /Users/jakub/.dotfiles/zsh_custom/plugins/zsh-syntax-highlighting
+[submodule "zsh_custom/plugins/zsh-syntax-highlighting"]
+	path = zsh_custom/plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
