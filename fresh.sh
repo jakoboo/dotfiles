@@ -1,37 +1,35 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Setting up your Mac..."
 
+git pull origin main
+
 # Check for Oh My Zsh and install if we don't have it
 if test ! $(which omz); then
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
+  /bin/bash -c '$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)'
+
+  # Install p10k fonts - unavailable in brew
+  # /bin/sh -c '$(curl --output-dir ~/Library/Fonts -fsSL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -o "MesloLGS NF Regular.ttf")'
+  # /bin/sh -c '$(curl --output-dir ~/Library/Fonts -fsSL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -o "MesloLGS NF Bold.ttf")'
+  # /bin/sh -c '$(curl --output-dir ~/Library/Fonts -fsSL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -o "MesloLGS NF Italic.ttf")'
+  # /bin/sh -c '$(curl --output-dir ~/Library/Fonts -fsSL https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -o "MesloLGS NF Bold Italic.ttf")'
 fi
 
-# Check for Homebrew and install if we don't have it
-if test ! $(which brew); then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
-  eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
+# Run brew
+$DOTFILES/brew.sh
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-# Update Homebrew recipes
-brew update
-
-# Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
-brew bundle --file $DOTFILES/Brewfile
-
 # Create a Projects directory
 mkdir $HOME/Projects
 
 # Create Projects subdirectories
-mkdir $HOME/Projects/Development
-mkdir $HOME/Projects/Development/src
+mkdir $HOME/Projects/Source
+mkdir $HOME/Projects/Source/GitHub
+mkdir $HOME/Projects/Source/GitLab
+mkdir $HOME/Projects/Source/BitBucket
 mkdir $HOME/Projects/Design
 
 # Clone Github repositories

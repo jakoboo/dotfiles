@@ -5,7 +5,6 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
-tap 'nicoverbruggen/homebrew-cask'
 tap 'stripe/stripe-cli'
 
 ################################################################################
@@ -38,6 +37,9 @@ brew 'yarn'
 ################################################################################
 # Apps
 ################################################################################
+# set arguments for all 'brew install --cask' commands
+cask_args appdir: "~/Applications", require_sha: true
+
 # Utility
 cask '1password'
 cask 'gpg-suite'
@@ -57,10 +59,9 @@ cask 'google-chrome-canary'
 
 # Communication
 cask 'discord'
-cask 'messenger'
 cask 'slack'
+cask 'messenger'
 cask 'telegram'
-cask 'zoom'
 
 # Development
 cask 'docker'
@@ -73,6 +74,9 @@ cask 'visual-studio-code'
 # Graphics
 cask 'figma'
 
+# Entertainment
+cask 'spotify'
+
 ################################################################################
 # Quicklook plugins
 ################################################################################
@@ -83,12 +87,9 @@ cask 'quicklook-json'
 # Fonts
 ################################################################################
 cask 'font-lato'
-cask 'font-open-sans'
 cask 'font-roboto'
-cask 'font-source-code-pro-for-powerline'
-cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
+cask 'font-montserrat'
+cask 'font-fira-code'
 
 ################################################################################
 # Mac App Store
