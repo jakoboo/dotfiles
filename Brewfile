@@ -6,6 +6,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'stripe/stripe-cli'
+tap 'stripe/stripe-mock'
 
 ################################################################################
 # Binaries
@@ -14,10 +15,8 @@ brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'ffmpeg'
-brew 'gh'
+brew 'gh' # GitHub CLI
 brew 'git'
-brew 'gnupg'
-brew 'grep'
 brew 'httpie'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
@@ -32,7 +31,6 @@ brew 'zsh'
 ################################################################################
 brew 'imagemagick'
 brew 'node'
-brew 'yarn'
 
 ################################################################################
 # Apps
@@ -49,8 +47,9 @@ cask 'nordvpn'
 cask 'pastebot'
 cask 'rectangle'
 cask 'transmission'
-cask 'transmit'
+# cask 'transmit'
 cask 'the-unarchiver'
+# cask 'adguard'
 
 # Browsers
 cask 'firefox'
@@ -68,7 +67,8 @@ cask 'docker'
 cask 'github'
 cask 'jetbrains-toolbox'
 cask 'postman'
-cask 'tableplus'
+cask 'httpie'
+# cask 'tableplus'
 cask 'visual-studio-code'
 
 # Graphics
