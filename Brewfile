@@ -18,6 +18,7 @@ brew 'ffmpeg'
 brew 'gh' # GitHub CLI
 brew 'git'
 brew 'httpie'
+brew 'imagemagick'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
@@ -29,7 +30,6 @@ brew 'zsh'
 ################################################################################
 # Development
 ################################################################################
-brew 'imagemagick'
 brew 'node'
 
 ################################################################################
@@ -98,5 +98,4 @@ mas 'Giphy Capture', id: 668208984
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Lightweight PDF', id: 1450640351
-mas 'Spark', id: 1176895641
 mas 'Speedtest', id: 1153157709

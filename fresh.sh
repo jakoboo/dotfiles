@@ -2,9 +2,7 @@
 
 echo "Setting up your Mac..."
 
-git pull origin main
-git submodule init
-git submodule update
+git pull --recurse-submodules origin main
 
 # Check for Oh My Zsh and install if we don't have it
 if test ! $(which omz); then
@@ -33,6 +31,7 @@ mkdir $HOME/Projects/Source/GitHub
 mkdir $HOME/Projects/Source/GitLab
 mkdir $HOME/Projects/Source/BitBucket
 mkdir $HOME/Projects/Design
+mkdir $HOME/Projects/Database
 
 # Clone Github repositories
 # $DOTFILES/clone.sh
@@ -42,6 +41,6 @@ ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 ln -s $HOME/.dotfiles/.mackup $HOME/.mackup
 
 # Set macOS preferences - we will run this last because this will reload the shell
-source $HOME/.dotfiles/.macos
+# source $HOME/.dotfiles/.macos
 
 echo "Setup finished! :)"
