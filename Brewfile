@@ -39,11 +39,11 @@ brew 'node'
 cask_args appdir: "~/Applications", require_sha: true
 
 # Utility
-cask '1password'
+# cask '1password' // some issues with chrome extension when installing through brew
 cask 'gpg-suite'
 cask 'imageoptim'
 cask 'iterm2'
-cask 'nordvpn'
+# cask 'nordvpn'
 cask 'pastebot'
 cask 'rectangle'
 cask 'transmission'
@@ -52,15 +52,14 @@ cask 'the-unarchiver'
 # cask 'adguard'
 
 # Browsers
-cask 'firefox'
 cask 'google-chrome'
-cask 'google-chrome-canary'
+cask 'google-chrome-canary', args: { require_sha: false }
+cask 'firefox'
 
 # Communication
 cask 'discord'
 cask 'slack'
-cask 'messenger'
-cask 'telegram'
+# cask 'telegram'
 
 # Development
 cask 'docker'
@@ -81,20 +80,19 @@ cask 'spotify'
 # Quicklook plugins
 ################################################################################
 cask 'qlmarkdown'
-cask 'quicklook-json'
+cask 'quicklook-json', args: { require_sha: false }
 
 ################################################################################
 # Fonts
 ################################################################################
-cask 'font-lato'
-cask 'font-roboto'
-cask 'font-montserrat'
+cask 'font-lato', args: { require_sha: false }
+cask 'font-roboto', args: { require_sha: false }
+cask 'font-montserrat', args: { require_sha: false }
 cask 'font-fira-code'
 
 ################################################################################
 # Mac App Store
 ################################################################################
-mas 'Giphy Capture', id: 668208984
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
 mas 'Lightweight PDF', id: 1450640351

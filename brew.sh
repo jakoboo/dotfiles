@@ -4,8 +4,8 @@
 if test ! $(which brew); then
   NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-  # echo 'eval "$($(brew --prefix)/bin/brew shellenv)"' >> $HOME/.zprofile
-  # eval '$($(brew --prefix)/bin/brew shellenv)'
+  echo 'eval "$($(brew --prefix)/bin/brew shellenv)"' >> $HOME/.zprofile
+  eval '$($(brew --prefix)/bin/brew shellenv)'
 fi
 
 # Make sure we’re using the latest Homebrew and update recipes
