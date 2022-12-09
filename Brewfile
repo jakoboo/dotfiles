@@ -64,11 +64,14 @@ cask 'slack'
 # Development
 cask 'docker'
 cask 'github'
+cask 'sourcetree'
 cask 'jetbrains-toolbox'
 cask 'postman'
 cask 'httpie'
 # cask 'tableplus'
 cask 'visual-studio-code'
+cask 'mongodb-compass'
+cask 'studio-3t'
 
 # Graphics
 cask 'figma'

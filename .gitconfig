@@ -2,6 +2,9 @@
 	name = Jakub Bąbelek
     email = jbbabelek@gmail.com
 
+[github]
+	user = jakoboo
+
 [alias]
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit
@@ -44,6 +47,8 @@
     trustctime = false
     editor = vim
 
+	sshCommand = "ssh -i ~/.ssh/id_ed25519"
+
 [color]
 	# Use colors in Git commands that are capable of colored output when
 	# outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
@@ -82,3 +87,8 @@
 
 [pull]
 	rebase = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
